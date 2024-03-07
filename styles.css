@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    padding: 0;
     width: 100%;
     height: 100vh;
     font-family: sans-serif;
@@ -8,7 +9,7 @@ body {
 header {
     width: 100%;
     text-align: center;
-    margin: 2rem;
+    margin: 2rem 0;
 
     min-width: 500px;
 }
@@ -18,6 +19,7 @@ header {
 }
 
 #description {
+    font-style: italic;
     margin: unset;
 }
 
@@ -30,18 +32,50 @@ form {
 
 fieldset {
     margin-top: 1em;
-    padding: 0 1em 1em 1em;
+    padding: 0 2em 2em 2em;
 }
 
-label, textarea {
+label {
     display: block;
     margin-top: 1em;
 }
 
-input, select {
+input, select, textarea {
     width: 100%;
 }
 
-input[type="radio"], input[type="checkbox"] {
+textarea {
+    min-height: 50px;
+    resize: vertical;
+}
+
+.legend {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.p-label {
+    margin: 1em 0 .25em;
+}
+
+label, .legend, .p-label {
+    font-size: 20px;
+}
+
+.label-unset {
+    margin-top: .25rem;
+}
+
+input[type="radio"], input[type="checkbox"], input[type="submit"] {
     width: unset;
+}
+
+.submit-space {
+    padding: 1rem;
+    width: 100%;
+}
+
+#submit {
+    display: block;
+    margin: auto;
 }

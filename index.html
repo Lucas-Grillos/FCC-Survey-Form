@@ -21,7 +21,7 @@
         </fieldset>
 
         <fieldset>
-            <p class="legend">Tell us about your cat preferences</p>
+            <p class="legend">Cat Preferences</p>
             <label class="full-width">What cat personality is your favorite?
                 <select id="dropdown">
                     <option>---</option>
@@ -33,25 +33,23 @@
                 </select>
             </label>
 
-            <textarea placeholder="Describe one fond memory with a cat of yours..."></textarea>
+            <p class="p-label">Describe a favorite memory with a cat</p>
+            <textarea placeholder="..."></textarea>
 
-            <hr>
+            <p class="p-label">What is your favorite type(s) of cat coat patterns?</p>
+            <label class="label-unset"><input type="checkbox" value="tabby"/> Tabby </label>
+            <label class="label-unset"><input type="checkbox" value="solid"/> Solid </label>
+            <label class="label-unset"><input type="checkbox" value="bicolor"/> Bicolor </label>
 
-            <p>What is your favorite type(s) of cat coat patterns?</p>
-            <label><input type="checkbox" value="tabby"/> Tabby </label>
-            <label><input type="checkbox" value="solid"/> Solid </label>
-            <label><input type="checkbox" value="bicolor"/> Bicolor </label>
-
-            <hr>
-
-            <p>Would you like to own another cat?</p>
-            <label><input type="radio" value="0" name="cat-group" checked /> Yes </label>
-            <label><input type="radio" value="1" name="cat-group" /> No</label>
-            <label><input type="radio" value="2" name="cat-group"></input> Undecided</label>
+            <p class="p-label">Would you like to own another cat?</p>
+            <label class="label-unset"><input type="radio" value="0" name="cat-group" checked /> Yes </label>
+            <label class="label-unset"><input type="radio" value="1" name="cat-group" /> No</label>
+            <label class="label-unset"><input type="radio" value="2" name="cat-group"></input> Undecided</label>
 
         </fieldset>
-
-        <input id="submit" type="submit" value="Submit">
+        <div class="submit-space">
+            <input id="submit" type="submit" value="Submit">
+        </div>
     </form>
 </body>
 </html>
