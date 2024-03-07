@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1 id="title">Cat Survey</h1>
-    <p id="description">This survey is about the cats you have, and their personalities</p>
+    <header>
+        <h1 id="title">Cat Survey</h1>
+        <p id="description">A survey about you, your cats, and your cat preferences</p>
+    </header>
+
     <form action="" method="" id="survey-form">
         <fieldset>
-            <legend>User Information</legend>
+            <p class="legend">User Information</p>
             <label id="name-label" for="name">Name: <input id="name" type="text" name="name" placeholder="Lucas" required /></label>
             <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="example@gmail.com" required /></label>
             <label id="number-label" for="number">How many cats do you own?<input id="number" type="number" min="0" max="99" placeholder="0 (too few) - 99 (too many!)" required /></label>
         </fieldset>
 
         <fieldset>
-            <legend>Tell us about your cat preferences</legend>
-            <label>What cat personality is your favorite?
+            <p class="legend">Tell us about your cat preferences</p>
+            <label class="full-width">What cat personality is your favorite?
                 <select id="dropdown">
                     <option>---</option>
                     <option>Neuroticism (skittishness)</option>
@@ -28,17 +32,23 @@
                     <option>Agreeableness</option>
                 </select>
             </label>
+
             <textarea placeholder="Describe one fond memory with a cat of yours..."></textarea>
-        </fieldset>
-            What is your favorite type of cat coat patterns? You can select more than one
-            <label>Tabby <input type="checkbox" value="tabby"/></label>
-            <label>Solid <input type="checkbox" value="solid"/></label>
-            <label>Bicolor <input type="checkbox" value="bicolor"/></label>
+
+            <hr>
+
+            <p>What is your favorite type(s) of cat coat patterns?</p>
+            <label><input type="checkbox" value="tabby"/> Tabby </label>
+            <label><input type="checkbox" value="solid"/> Solid </label>
+            <label><input type="checkbox" value="bicolor"/> Bicolor </label>
+
+            <hr>
 
             <p>Would you like to own another cat?</p>
-            <label>Yes <input type="radio" value="0" name="cat-group" checked /></label>
-            <label>No <input type="radio" value="1" name="cat-group" /></label>
-            <label>Undecided <input type="radio" value="2" name="cat-group"></input></label>
+            <label><input type="radio" value="0" name="cat-group" checked /> Yes </label>
+            <label><input type="radio" value="1" name="cat-group" /> No</label>
+            <label><input type="radio" value="2" name="cat-group"></input> Undecided</label>
+
         </fieldset>
 
         <input id="submit" type="submit" value="Submit">
