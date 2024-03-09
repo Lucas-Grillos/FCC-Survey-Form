@@ -1,5 +1,7 @@
 
-
+* {
+    box-sizing: border-box
+}
 body {
     position: relative;
     margin: 0;
@@ -23,6 +25,8 @@ header {
 }
 
 #title {
+    font-size: 40px;
+    font-weight: 300;
     margin: 0.25rem;
 }
 
@@ -37,13 +41,15 @@ form {
     max-width: 600px;
     margin: 0 auto;
     padding: 1em;
-
+    border-radius: 5px;
     background-color: #13120099;
 }
 
 fieldset {
+    border: none;
+    border-radius: 5px;
     padding: 0 2em 2em 2em;
-    background-color: #131200bb;
+    background-color: #13120055;
 }
 
 fieldset:last-of-type {
@@ -80,12 +86,27 @@ label, .legend, .p-label {
 }
 
 .checkable-label {
-    margin-top: 0.2rem;
+    margin-top: 0.25rem;
 }
 
-input[type="radio"], input[type="checkbox"], input[type="submit"] {
+input[type="radio"], input[type="checkbox"] {
     width: unset;
+    transform: scale(1.2);
 }
+
+input[type=text], input[type="email"], input[type="number"], textarea, select {
+    font-size: 16px;
+    margin-top: .25rem;
+    padding: .5rem;
+}
+
+input[type=text]:focus, input[type="email"]:focus, input[type="number"]:focus, textarea:focus, select:focus {
+    box-shadow: inset 2px 2px 0px #E9806E;    
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none
+} 
 
 .submit-space {
     padding-top: 1rem;
@@ -95,4 +116,5 @@ input[type="radio"], input[type="checkbox"], input[type="submit"] {
 #submit {
     display: block;
     margin: auto;
+    width: unset;
 }
